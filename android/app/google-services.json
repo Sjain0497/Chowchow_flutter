@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "737367386283",
+    "project_id": "chowchow-f85e2",
+    "storage_bucket": "chowchow-f85e2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:737367386283:android:22d7a7ceed3d0326f0efee",
+        "android_client_info": {
+          "package_name": "com.websquareit.chowchow"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "737367386283-ppm2onrfqp4buc8po6s6noptiji21lnk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxegECYudstiPmbwSY_oQNOcKyBCeUees"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "737367386283-ppm2onrfqp4buc8po6s6noptiji21lnk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
