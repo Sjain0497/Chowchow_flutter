@@ -7,7 +7,8 @@ class TermsAndCondition extends StatefulWidget {
   TermsAndCondition({Key key, this.parentScaffoldKey}) : super(key: key);
 
   @override
-  _TermsAndConditionWidgetState createState() => _TermsAndConditionWidgetState();
+  _TermsAndConditionWidgetState createState() =>
+      _TermsAndConditionWidgetState();
 }
 
 class _TermsAndConditionWidgetState extends State<TermsAndCondition> {
@@ -19,10 +20,10 @@ class _TermsAndConditionWidgetState extends State<TermsAndCondition> {
         title: const Text('Terms And Condition'),
       ),
       body: const WebView(
-        initialUrl: 'http://chowchow.websquareit.in/index.php/welcome/termsandcondition',
+        initialUrl:
+            'http://chowchow.websquareit.in/index.php/welcome/termsandcondition',
         javascriptMode: JavascriptMode.unrestricted,
       ),
     );
   }
-
 }

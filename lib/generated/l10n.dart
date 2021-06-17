@@ -144,6 +144,7 @@ class S {
       args: [],
     );
   }
+
   /// `AboutChowchow`
   String get aboutchowchow {
     return Intl.message(
@@ -153,6 +154,7 @@ class S {
       args: [],
     );
   }
+
   //aboutChowchowDesc
   String get aboutchowchowdesc {
     return Intl.message(
@@ -162,6 +164,7 @@ class S {
       args: [],
     );
   }
+
   /// `Submit`
   String get submit {
     return Intl.message(
@@ -1351,6 +1354,7 @@ class S {
       args: [],
     );
   }
+
   String get checkyourMail {
     return Intl.message(
       'Please check your mail for verification',
@@ -1359,6 +1363,7 @@ class S {
       args: [],
     );
   }
+
   /// `Addresses refreshed successfuly`
   String get addresses_refreshed_successfuly {
     return Intl.message(

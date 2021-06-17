@@ -9,8 +9,6 @@ class AboutListItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
-
     return Container(
       height: 15.0,
       width: 15.0,

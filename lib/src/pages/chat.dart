@@ -55,23 +55,23 @@ class _ChatWidgetState extends StateMVC<ChatWidget> {
       builder: (context, snapshot) {
         return snapshot.hasData
             ? ListView.builder(
-                key: _myListKey,
-                reverse: true,
-                physics: const AlwaysScrollableScrollPhysics(),
-                padding: EdgeInsets.symmetric(vertical: 15, horizontal: 20),
-                itemCount: snapshot.data.documents.length,
-                shrinkWrap: false,
-                primary: true,
-                itemBuilder: (context, index) {
-                  print(snapshot.data.documents[index].data());
-                  Chat _chat =
-                      Chat.fromJSON(snapshot.data.documents[index].data());
-                  _chat.user = _con.conversation.users
-                      .firstWhere((_user) => _user.id == _chat.userId);
-                  return ChatMessageListItem(
-                    chat: _chat,
-                  );
-                })
+            key: _myListKey,
+            reverse: true,
+            physics: const AlwaysScrollableScrollPhysics(),
+            padding: EdgeInsets.symmetric(vertical: 15, horizontal: 20),
+            itemCount: snapshot.data.documents.length,
+            shrinkWrap: false,
+            primary: true,
+            itemBuilder: (context, index) {
+              print(snapshot.data.documents[index].data());
+              Chat _chat =
+              Chat.fromJSON(snapshot.data.documents[index].data());
+              _chat.user = _con.conversation.users
+                  .firstWhere((_user) => _user.id == _chat.userId);
+              return ChatMessageListItem(
+                chat: _chat,
+              );
+            })
             : EmptyMessagesWidget();
       },
     );
@@ -87,7 +87,9 @@ class _ChatWidgetState extends StateMVC<ChatWidget> {
         centerTitle: true,
         leading: new IconButton(
             icon:
-                new Icon(Icons.arrow_back, color: Theme.of(context).hintColor),
+            new Icon(Icons.arrow_back, color: Theme
+                .of(context)
+                .hintColor),
             onPressed: () {
               if (widget.routeArgument.id == null) {
                 // from conversation page
@@ -105,15 +107,20 @@ class _ChatWidgetState extends StateMVC<ChatWidget> {
           _con.conversation.name,
           overflow: TextOverflow.fade,
           maxLines: 1,
-          style: Theme.of(context)
+          style: Theme
+              .of(context)
               .textTheme
               .headline6
               .merge(TextStyle(letterSpacing: 1.3)),
         ),
         actions: <Widget>[
           new ShoppingCartButtonWidget(
-              iconColor: Theme.of(context).hintColor,
-              labelColor: Theme.of(context).accentColor),
+              iconColor: Theme
+                  .of(context)
+                  .hintColor,
+              labelColor: Theme
+                  .of(context)
+                  .accentColor),
         ],
       ),
       body: Column(
@@ -124,10 +131,15 @@ class _ChatWidgetState extends StateMVC<ChatWidget> {
           ),
           Container(
             decoration: BoxDecoration(
-              color: Theme.of(context).primaryColor,
+              color: Theme
+                  .of(context)
+                  .primaryColor,
               boxShadow: [
                 BoxShadow(
-                    color: Theme.of(context).hintColor.withOpacity(0.10),
+                    color: Theme
+                        .of(context)
+                        .hintColor
+                        .withOpacity(0.10),
                     offset: Offset(0, -4),
                     blurRadius: 10)
               ],
@@ -136,9 +148,14 @@ class _ChatWidgetState extends StateMVC<ChatWidget> {
               controller: myController,
               decoration: InputDecoration(
                 contentPadding: EdgeInsets.all(20),
-                hintText: S.of(context).typeToStartChat,
+                hintText: S
+                    .of(context)
+                    .typeToStartChat,
                 hintStyle: TextStyle(
-                    color: Theme.of(context).focusColor.withOpacity(0.8)),
+                    color: Theme
+                        .of(context)
+                        .focusColor
+                        .withOpacity(0.8)),
                 suffixIcon: IconButton(
                   padding: EdgeInsets.only(right: 30),
                   onPressed: () {
@@ -149,15 +166,17 @@ class _ChatWidgetState extends StateMVC<ChatWidget> {
                   },
                   icon: Icon(
                     Icons.send,
-                    color: Theme.of(context).accentColor,
+                    color: Theme
+                        .of(context)
+                        .accentColor,
                     size: 30,
                   ),
                 ),
                 border: UnderlineInputBorder(borderSide: BorderSide.none),
                 enabledBorder:
-                    UnderlineInputBorder(borderSide: BorderSide.none),
+                UnderlineInputBorder(borderSide: BorderSide.none),
                 focusedBorder:
-                    UnderlineInputBorder(borderSide: BorderSide.none),
+                UnderlineInputBorder(borderSide: BorderSide.none),
               ),
             ),
           )

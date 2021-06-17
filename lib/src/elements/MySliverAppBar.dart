@@ -13,7 +13,6 @@ class MySliverAppBar extends SliverPersistentHeaderDelegate {
       overflow: Overflow.visible,
       children: [
         Container(
-
           decoration: BoxDecoration(
             image: DecorationImage(
               image: AssetImage(
@@ -24,8 +23,6 @@ class MySliverAppBar extends SliverPersistentHeaderDelegate {
             /* color: Theme.of(context).accentColor*/
           ),
         ),
-
-
         Center(
           child: Opacity(
             opacity: shrinkOffset / expandedHeight,
@@ -48,9 +45,9 @@ class MySliverAppBar extends SliverPersistentHeaderDelegate {
               color: Colors.transparent,
               elevation: 10,
               child: SizedBox(
-                height: MediaQuery.of(context).size.height /6,
-                width: MediaQuery.of(context).size.width /4,
-                child:Image.asset(
+                height: MediaQuery.of(context).size.height / 6,
+                width: MediaQuery.of(context).size.width / 4,
+                child: Image.asset(
                   'assets/img/logo.png',
                   width: 60,
                   fit: BoxFit.contain,
@@ -59,7 +56,6 @@ class MySliverAppBar extends SliverPersistentHeaderDelegate {
             ),
           ),
         ),
-
       ],
     );
   }

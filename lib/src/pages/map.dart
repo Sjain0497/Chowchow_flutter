@@ -48,7 +48,9 @@ class _MapWidgetState extends StateMVC<MapWidget> {
         elevation: 0,
         centerTitle: true,
         leading: IconButton(
-          icon: new Icon(Icons.arrow_back, color: Theme.of(context).hintColor),
+          icon: new Icon(Icons.arrow_back, color: Theme
+              .of(context)
+              .hintColor),
           onPressed: () =>
               Navigator.of(context).pushNamed('/Pages', arguments: 1),
         ),
@@ -62,8 +64,11 @@ class _MapWidgetState extends StateMVC<MapWidget> {
         //         onPressed: () => Navigator.of(context).pushNamed('/Pages', arguments: 1),
         //       ),
         title: Text(
-          S.of(context).maps_explorer,
-          style: Theme.of(context)
+          S
+              .of(context)
+              .maps_explorer,
+          style: Theme
+              .of(context)
               .textTheme
               .headline6
               .merge(TextStyle(letterSpacing: 1.3)),
@@ -72,7 +77,9 @@ class _MapWidgetState extends StateMVC<MapWidget> {
           IconButton(
             icon: Icon(
               Icons.my_location,
-              color: Theme.of(context).hintColor,
+              color: Theme
+                  .of(context)
+                  .hintColor,
             ),
             onPressed: () {
               _con.goCurrentLocation();
@@ -96,21 +103,21 @@ class _MapWidgetState extends StateMVC<MapWidget> {
           _con.cameraPosition == null
               ? CircularLoadingWidget(height: 0)
               : GoogleMap(
-                  mapToolbarEnabled: false,
-                  mapType: MapType.normal,
-                  initialCameraPosition: _con.cameraPosition,
-                  markers: Set.from(_con.allMarkers),
-                  onMapCreated: (GoogleMapController controller) {
-                    _con.mapController.complete(controller);
-                  },
-                  onCameraMove: (CameraPosition cameraPosition) {
-                    _con.cameraPosition = cameraPosition;
-                  },
-                  onCameraIdle: () {
-                    _con.getRestaurantsOfArea();
-                  },
-                  polylines: _con.polylines,
-                ),
+            mapToolbarEnabled: false,
+            mapType: MapType.normal,
+            initialCameraPosition: _con.cameraPosition,
+            markers: Set.from(_con.allMarkers),
+            onMapCreated: (GoogleMapController controller) {
+              _con.mapController.complete(controller);
+            },
+            onCameraMove: (CameraPosition cameraPosition) {
+              _con.cameraPosition = cameraPosition;
+            },
+            onCameraIdle: () {
+              _con.getRestaurantsOfArea();
+            },
+            polylines: _con.polylines,
+          ),
           // CardsCarouselWidget(
           //   restaurantsList: _con.topRestaurants,
           //   heroTag: 'map_restaurants',

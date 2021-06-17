@@ -35,7 +35,6 @@ class RouteGenerator {
     // Getting arguments passed in while calling Navigator.pushNamed
     final args = settings.arguments;
     switch (settings.name) {
-
       case '/Debug':
         return MaterialPageRoute(
             builder: (_) => DebugWidget(routeArgument: args as RouteArgument));

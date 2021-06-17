@@ -87,7 +87,7 @@ class _SearchResultWidgetState extends StateMVC<SearchResultWidget> {
               ),
             ),
           ),
-           _con.foods.isEmpty
+          _con.foods.isEmpty
               ? CircularLoadingWidget(height: 288)
               : Expanded(
                   child: ListView(

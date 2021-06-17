@@ -60,20 +60,19 @@ class _ProfileWidgetState extends StateMVC<ProfileWidget> {
                 children: <Widget>[
                   ProfileAvatarWidget(user: currentUser.value),
                   ListTile(
-                    contentPadding:
-                        EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-                    leading: Icon(
-                      Icons.person,
-                      color: Theme.of(context).hintColor,
-                    ),
-                    title: Text(
-                      S.of(context).about,
-                      style: Theme.of(context).textTheme.headline4,
-                    ),
-                onTap: () {
-                  Navigator.of(context).pushNamed('/AboutUs');
-                }
-                  ),
+                      contentPadding:
+                          EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                      leading: Icon(
+                        Icons.person,
+                        color: Theme.of(context).hintColor,
+                      ),
+                      title: Text(
+                        S.of(context).about,
+                        style: Theme.of(context).textTheme.headline4,
+                      ),
+                      onTap: () {
+                        Navigator.of(context).pushNamed('/AboutUs');
+                      }),
 
                   // Padding(
                   //   padding: const EdgeInsets.symmetric(horizontal: 20),

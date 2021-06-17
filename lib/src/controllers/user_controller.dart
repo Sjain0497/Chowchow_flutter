@@ -62,14 +62,12 @@ class UserController extends ControllerMVC {
       Overlay.of(context).insert(loader);
       print("userdata..$user");
       repository.register(user).then((value) {
-
         if (value != null && value.apiToken != null) {
           Navigator.of(scaffoldKey.currentContext)
               .pushReplacementNamed('/Pages', arguments: 2);
-        } else if(value.apiToken==null){
+        } else if (value.apiToken == null) {
           showAlertDialog(context);
-
-        }else{
+        } else {
           scaffoldKey?.currentState?.showSnackBar(SnackBar(
             content: Text(S.of(context).wrong_email_or_password),
           ));
@@ -84,15 +82,19 @@ class UserController extends ControllerMVC {
       });
     }
   }
-  showAlertDialog(BuildContext context) {
 
+  showAlertDialog(BuildContext context) {
     // set up the button
     Widget okButton = FlatButton(
-      child: Text("OK",style: TextStyle(color: Theme.of(context).accentColor),),
-      onPressed: () { Navigator.pop(context);
-      scaffoldKey?.currentState?.showSnackBar(SnackBar(
-        content: Text(S.of(context).checkyourMail),
-      ));
+      child: Text(
+        "OK",
+        style: TextStyle(color: Theme.of(context).accentColor),
+      ),
+      onPressed: () {
+        Navigator.pop(context);
+        scaffoldKey?.currentState?.showSnackBar(SnackBar(
+          content: Text(S.of(context).checkyourMail),
+        ));
       },
     );
 
@@ -102,7 +104,8 @@ class UserController extends ControllerMVC {
       contentPadding: EdgeInsets.symmetric(vertical: 20),
       content: Padding(
         padding: EdgeInsets.all(10.0),
-        child: Text("Thanks for connecting with chwochow. Please wait for email verification on your same registered account.\n\n From \n Chowchow Team"),
+        child: Text(
+            "Thanks for connecting with chwochow. Please wait for email verification on your same registered account.\n\n From \n Chowchow Team"),
       ),
       actions: [
         okButton,
@@ -117,6 +120,7 @@ class UserController extends ControllerMVC {
       },
     );
   }
+
   void resetPassword() {
     FocusScope.of(context).unfocus();
     if (loginFormKey.currentState.validate()) {

@@ -7,7 +7,6 @@ import '../helpers/helper.dart';
 import '../models/route_argument.dart';
 import '../pages/home.dart';
 import '../pages/notifications.dart';
-
 import 'offer.dart';
 import 'orders.dart';
 
